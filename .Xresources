@@ -1,0 +1,39 @@
+## XTerm configuration, much of it taken from https://lukas.zapletalovi.com/2013/07/hidden-gems-of-xterm.html
+
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+XTerm*saveLines: 12288
+XTerm*visualbell: true
+XTerm*bellIsUrgent: true
+XTerm*termName: xterm-256color
+
+XTerm*font: -*-terminus-medium-*-*-*-18-*-*-*-*-*-iso10646-*
+XTerm*font1: -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm*font2: -*-terminus-medium-*-*-*-14-*-*-*-*-*-iso10646-*
+XTerm*font3: -*-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+XTerm*font4: -*-terminus-medium-*-*-*-22-*-*-*-*-*-iso10646-*
+XTerm*font5: -*-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+XTerm*font6: -*-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
+
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*on3Clicks: regex ([[:alpha:]]+://)?([[:alnum:]!#+,./=?@_~-]|(%[[:xdigit:]][[:xdigit:]]))+
+*VT100*translations: #override Shift <Btn1Up>: exec-formatted("chromium '%t'", PRIMARY)
+
+*background: black
+*foreground: white
+*color0:     rgb:00/00/00
+*color1:     rgb:d3/62/65
+*color2:     rgb:ae/ce/91
+*color3:     rgb:e7/e1/8c
+*color4:     rgb:7a/7a/b0
+*color5:     rgb:96/3c/59
+*color6:     rgb:41/81/79
+*color7:     rgb:be/be/be
+*color8:     rgb:66/66/66
+*color9:     rgb:ef/81/71
+*color10:    rgb:e5/f7/79
+*color11:    rgb:ff/f7/96
+*color12:    rgb:41/86/be
+*color13:    rgb:ef/9e/be
+*color14:    rgb:71/be/be
+*color15:    rgb:ff/ff/ff
