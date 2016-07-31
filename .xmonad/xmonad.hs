@@ -6,13 +6,12 @@ import XMonad.Layout.Grid
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.EZConfig
 import Data.List
-import qualified XMonad.StackSet as W
 
 main = xmonad =<< statusBar myBar myPP toggleStrutsKey (desktopConfig
 	{ modMask = mod4Mask
 	, terminal = "xterm"
 	, layoutHook = myLayout 
-    , manageHook = myManageHook <+> manageHook defaultConfig 
+    	, manageHook = myManageHook <+> manageHook defaultConfig 
  	}
         `additionalKeysP`
         [ ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10")
@@ -37,6 +36,3 @@ toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 myLayout = spacing 2 $ noBorders Full ||| Tall 1 (3/100) (1/2) ||| Grid
 
 myManageHook = fmap ( "aye-analyze" `isInfixOf`) className --> doShift "5"
-    
-
-

@@ -18,8 +18,6 @@ let g:ycm_semantic_triggers = {'haskell' : ['.']}
 au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
 
-source ~/.simplenoterc
-
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
