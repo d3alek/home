@@ -14,20 +14,23 @@ main = xmonad =<< statusBar myBar myPP toggleStrutsKey (desktopConfig
     	, manageHook = myManageHook <+> manageHook defaultConfig 
  	}
         `additionalKeysP`
-        [ ("<XF86MonBrightnessUp>", spawn "xbacklight -inc 10")
-        , ("<XF86MonBrightnessDown>", spawn "xbacklight -dec 10")
+        [ ("<XF86MonBrightnessUp>", spawn "light -A 10")
+        , ("<XF86MonBrightnessDown>", spawn "light -U 10")
         , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+")
         , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%-")
         , ("<XF86AudioMute>", spawn "amixer set Master toggle")
-        , ("<XF86MicMute>", spawn "amixer set Capture toggle") -- key name not work, possibly have to add it to XMonad with a patch
-        --, ("<XF86MicMute>", spawn "dm-tool lock") -- key name not work, possibly have to add it to XMonad with a patch
+        ]
+        `additionalKeys`
+        [ ((0, 0x1008FFB2), spawn "amixer set Capture toggle") --http://unix.stackexchange.com/a/211982
         ])
 
 -- Command to launch the bar.
 myBar = "xmobar"
 
 -- Custom PP, configure it as you like. It determines what is being written to the bar.
-myPP = xmobarPP { ppCurrent = xmobarColor "#429942" "" . wrap "<" ">" }
+myPP = xmobarPP { ppCurrent = xmobarColor "yellow" "" . wrap "[" "]"
+                , ppTitle   = xmobarColor "green"  "" . shorten 100
+                }
 
 -- Key binding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
