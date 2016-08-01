@@ -1,9 +1,11 @@
 #!/bin/sh
 
-user_resources = $HOME/.Xresources
+user_resources=$HOME/.Xresources
 
 if [ -f $user_resources ]; then
 	xrdb -merge $user_resources
 fi
 
 setxkbmap -layout us,bg -variant ,phonetic -option grp:alt_shift_toggle
+
+light-locker &
