@@ -11,9 +11,6 @@ set softtabstop=4               "Insert 4 spaces when tab is pressed
 set shiftwidth=4                "An indent is 4 spaces
 set shiftround                  "Round indent to nearest shiftwidth multiple
 
-" neco-ghc Haskell Auto completion engine
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
-
 " vim-hdevtools
 au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
@@ -33,3 +30,4 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:ycm_path_to_python_interpreter = '/usr/bin/python3.5'
