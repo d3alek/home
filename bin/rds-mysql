@@ -1,0 +1,1 @@
+mysql -h aacmxhus7ijro2.cylczqcwscd1.eu-central-1.rds.amazonaws.com -P 3306 -u seloto -p0EI3vzTBTq3pQz seloto --default-character-set=utf8
