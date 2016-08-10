@@ -31,3 +31,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python3.5'
+let g:syntastic_python_python_exec = 'python3' 
