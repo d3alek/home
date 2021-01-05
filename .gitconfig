@@ -1,3 +1,5 @@
 [user]
 	email = akodzhabashev@gmail.com
 	name = Aleksandar Kodzhabashev
+[core]
+	excludesfile = ~/.gitignore

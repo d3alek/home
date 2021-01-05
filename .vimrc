@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 syntax enable
 filetype plugin indent on
-colorscheme elflord
+colorscheme github
 
 " Tab specific option
 set tabstop=4                   "A tab is 8 spaces
@@ -31,4 +31,4 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:ycm_path_to_python_interpreter = '/usr/bin/python3.5'
-let g:syntastic_python_python_exec = 'python3' 
+let g:syntastic_python_python_exec = 'python3'
